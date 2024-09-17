@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS crypto_data (
+                    ID VARCHAR(255),
+                    Symbol VARCHAR(50) NOT NULL,
+                    Name VARCHAR(255) NOT NULL,
+                    Current_Price DECIMAL(18, 8) NOT NULL,
+                    Market_Cap DECIMAL(38, 2) NOT NULL,
+                    Total_Volume DECIMAL(38, 2),
+                    High_24h DECIMAL(18, 8),
+                    Low_24h DECIMAL(18, 8),
+                    Price_Change_24h DECIMAL(18, 8),
+                    Price_Change_Percentage_24h DECIMAL(5, 2),
+                    Market_Cap_Change_24h DECIMAL(38, 2),
+                    Market_Cap_Change_Percentage_24h DECIMAL(5, 2),
+                    Circulating_Supply DECIMAL(38, 2),
+                    Total_Supply DECIMAL(38, 2),
+                    Ath DECIMAL(18, 8),
+                    Ath_Change_Percentage DECIMAL(5, 2),
+                    DateTime TIMESTAMP,
+                    Extracted_At TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    PRIMARY KEY (Symbol, DateTime)
+                );
